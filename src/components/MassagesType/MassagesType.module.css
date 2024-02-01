@@ -1,5 +1,4 @@
 .typeWrapper {
-    padding: 30px 0;
     background-color: #fbd3cd;
     height: auto;
 }
@@ -8,9 +7,11 @@
 .typeBlock {
     width: 1200px;
     margin: 0 auto;
+    padding: 40px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+

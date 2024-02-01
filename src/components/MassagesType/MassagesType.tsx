@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import s from './MassagesType.module.css';
-import {TypeMassage} from "./TypeMassage";
+import {Type} from "./Type";
 
 
 interface MassageData {
@@ -19,8 +19,8 @@ export const MassagesType: FC<MassagesTypeProps> = ({massageData}) => {
         <div className={s.typeWrapper}>
             <div className={s.typeBlock}>
                 {massageData.map((massage) => (
-                    <TypeMassage title={massage.title} description={massage.description} image={massage.image}
-                                 key={massage.id}/>
+                    <Type title={massage.title} description={massage.description} image={massage.image}
+                          key={massage.id}/>
                 ))}
             </div>
         </div>
