@@ -1,0 +1,75 @@
+.typeWrapper {
+    margin: 20px 10px;
+    padding: 20px;
+    max-width: 370px;
+    min-height: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7eae8;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.typeImg {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.typeTitle {
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    letter-spacing: 0.1em;
+}
+
+.typeDescription {
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.buttonBlock {
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #f39a8f;
+}
+
+.buttonBlock:hover .typeButton {
+    color: #f39a8f;
+}
+
+.buttonBlock:hover .arrowIcon {
+    color: #f39a8f;
+}
+
+.typeButton {
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    transition: color 0.3s ease;
+    vertical-align: middle;
+}
+
+.arrowIcon {
+    margin-left: 10px;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+
+

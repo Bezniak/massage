@@ -1,0 +1,22 @@
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.title {
+    font-size: 70px;
+    color: #fff;
+    letter-spacing: 0.5rem;
+}
+
+.description {
+    margin: 20px 0;
+    font-size: 50px;
+    letter-spacing: 0.5rem;
+    color: #fff;
+}
+
