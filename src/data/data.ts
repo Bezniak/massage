@@ -1,4 +1,3 @@
-
 interface WelcomeSectionData {
     title: string;
     description: string;
@@ -16,11 +15,14 @@ interface PhotoCollectionData {
     url: string;
 }
 
+
 interface AppData {
     welcomeSection: WelcomeSectionData;
     massageData: MassageData[];
     photoCollection: PhotoCollectionData[];
+    conclusionSection: WelcomeSectionData;
 }
+
 
 
 export const data: AppData = {
@@ -32,7 +34,6 @@ export const data: AppData = {
         Мы будем рады приветствовать Вас и порекомендовать наши возможности и услуги.`,
     },
     massageData: [
-
         {
             id: 1,
             image: '/ClassicMassage.png',
@@ -136,4 +137,9 @@ export const data: AppData = {
             url: '/photo_12.jpg'
         },
     ],
+    conclusionSection: {
+        title: "Добро пожаловать в студию массажа 'Art-Massage' – ваш уютный уголок спокойствия и релаксации!",
+        description: `Сделайте заботу о своем здоровье и комфорте приоритетом. 
+        Забронируйте свой массаж сейчас, и позвольте себе насладиться уникальным опытом релаксации в студии 'Art-Massage'.`,
+    }
 }

@@ -17,6 +17,7 @@ interface MassagesTypeProps {
 export const MassagesType: FC<MassagesTypeProps> = ({massageData}) => {
     return (
         <div className={s.typeWrapper}>
+            <h2 className={s.typeTitle}>Разнообразие эксклюзивных массажей в нашей студии</h2>
             <div className={s.typeBlock}>
                 {massageData.map((massage) => (
                     <Type title={massage.title} description={massage.description} image={massage.image}

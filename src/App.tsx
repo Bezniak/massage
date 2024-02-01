@@ -5,6 +5,8 @@ import MainContent from "./components/MainContent/MainContent";
 import {WelcomeSection} from "./components/WelcomeSection/WelcomeSection";
 import {MassagesType} from "./components/MassagesType/MassagesType";
 import {PhotoCollection} from "./components/PhotoCollection/PhotoCollection";
+import ConclusionSection from "./components/ConclusionSection/ConclusionSection";
+import {Footer} from "./components/Footer/Footer";
 
 interface WelcomeSection {
     title: string;
@@ -27,6 +29,7 @@ interface Data {
     welcomeSection: WelcomeSection;
     massageData: MassageData[];
     photoCollection: PhotoCollectionItem[];
+    conclusionSection: WelcomeSection;
 }
 
 interface AppProps {
@@ -44,6 +47,8 @@ function App({data}: AppProps) {
                 <WelcomeSection {...data.welcomeSection} />
                 <MassagesType massageData={data.massageData}/>
                 <PhotoCollection photoCollection={data.photoCollection}/>
+                <ConclusionSection {...data.conclusionSection} />
+                <Footer/>
             </div>
         </div>
     );

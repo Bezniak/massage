@@ -39,17 +39,21 @@
 }
 
 .typeTitle {
-    font-size: 18px;
+    font-family: "Marck Script", cursive;
+    font-size: 26px;
     font-weight: 800;
-    color: #000;
+    color: #43484e;
     letter-spacing: 0.1em;
+    padding: 10px;
 }
 
 .typeDescription {
     font-size: 16px;
-    color: #000;
-    font-weight: 500;
+    color: #43484e;
+    font-weight: 400;
     text-align: center;
+    padding: 0;
+
 }
 
 .buttonBlock {
@@ -80,10 +84,12 @@
     letter-spacing: 0.2rem;
     transition: color 0.3s ease;
     vertical-align: middle;
+    color: #43484e;
+
 }
 
 .arrowIcon {
     margin-left: 10px;
-    color: #000;
+    color: #43484e;
     transition: color 0.3s ease;
 }

@@ -3,6 +3,13 @@
     height: auto;
 }
 
+.typeTitle {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 5px 10px 5px;
+    font-size: 50px;
+}
 
 .typeBlock {
     width: 1200px;
