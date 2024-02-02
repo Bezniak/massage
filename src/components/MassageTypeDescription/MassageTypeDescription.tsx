@@ -1,7 +1,9 @@
 import React, {FC} from 'react';
-
+import s from './MassageTypeDescription.module.css';
 
 interface MassageProps {
+    id: string;
+    imageBG: string;
     title: string;
     description: string;
     benefits: string[];
@@ -11,17 +13,20 @@ interface MassageProps {
     photoUrl: string[];
 }
 
-const ClassicMassageComponent: FC<MassageProps> = ({ title, description, benefits, stages, contraindications, conclusion, photoUrl }) => {
+const MassageTypeDescription: FC<MassageProps> = ({
+                                                      title,
+                                                      imageBG,
+                                                      description,
+                                                      benefits,
+                                                      stages,
+                                                      contraindications,
+                                                      conclusion,
+                                                      photoUrl
+                                                  }) => {
     return (
-        <div>
+        <div className={s.lala} style={{backgroundImage: `url(${imageBG})`, backgroundSize: 'cover'}}>
             <h1>{title}</h1>
             <p>{description}</p>
-
-            <div>
-                {photoUrl.map((photo, index) => (
-                    <img key={index} src={photo} alt={`Massage session ${index + 1}`}/>
-                ))}
-            </div>
 
             <div>
                 <h2>Преимущества:</h2>
@@ -50,9 +55,16 @@ const ClassicMassageComponent: FC<MassageProps> = ({ title, description, benefit
                 </ul>
             </div>
 
+            <div>
+                <h2>Фотографии:</h2>
+                {photoUrl.map((url, index) => (
+                    <img className={s.img} key={index} src={url} alt={`Massage session ${index + 1}`}/>
+                ))}
+            </div>
+
             <p>{conclusion}</p>
         </div>
     );
 };
 
-export default ClassicMassageComponent;
+export default MassageTypeDescription;

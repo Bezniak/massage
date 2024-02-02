@@ -1,12 +1,10 @@
 .appBlock {
-  height: 100vh;
-  background-image: url("../src/components/images/bg.jpg");
-  background-size: cover;
-  margin: 0 auto;
+    height: 100vh;
+    margin: 0 auto;
 }
 
 .appWrapper {
-  width: 1200px;
-  margin: 0 auto;
+    width: 1200px;
+    margin: 0 auto;
 
 }

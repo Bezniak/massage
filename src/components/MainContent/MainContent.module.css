@@ -1,4 +1,6 @@
 .mainBlock {
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
