@@ -17,7 +17,7 @@ interface WelcomeSection {
 }
 
 interface MassageData {
-    id: number;
+    id: string;
     image: string;
     title: string;
     description: string;
