@@ -10,6 +10,9 @@ interface FooterProps {
 }
 
 export const Footer: FC<FooterProps> = () => {
+
+    const currentYear = new Date().getFullYear()
+
     return (
         <div className={s.footerWrapper}>
             <div className={s.footerBlock}>
@@ -136,6 +139,7 @@ export const Footer: FC<FooterProps> = () => {
                     </ul>
                 </div>
             </div>
+            <p className={s.copyRight}>© {currentYear} Art-Massage. Все права защищены.</p>
         </div>
     );
 };
