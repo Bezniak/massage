@@ -200,12 +200,12 @@ export const data: AppData = {
             title: "Массаж спины",
             description: `Классический массаж тела – это великолепный способ достичь гармонии между телом и разумом. Эта древняя техника массажа широко применяется в современном мире для улучшения физического и эмоционального благополучия. Давайте погрузимся в мир классического массажа и узнаем, как он может преобразить ваше состояние.`,
             photoUrl: [
-                '/ClassicBodyMassage_1.jpg',
-                '/ClassicBodyMassage_2.jpg',
-                '/ClassicBodyMassage_3.jpg',
-                '/ClassicBodyMassage_4.jpg',
-                '/ClassicBodyMassage_5.jpg',
-                '/ClassicBodyMassage_6.jpg',
+                '/backmassage_1.jpg',
+                '/backmassage_2.jpg',
+                '/backmassage_3.jpg',
+                '/backmassage_4.jpg',
+                '/backmassage_5.jpg',
+                '/backmassage_6.jpg',
             ],
             benefits: [
                 "Снятие напряжения и стресса: Деликатные движения массажиста помогают расслабить мышцы, освободив от накопившегося напряжения.",
