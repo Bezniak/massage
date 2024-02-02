@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
 
 *, *:before, *:after {
@@ -11,21 +9,23 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Noto Sans", sans-serif;
-
-    /*font-family: "Marck Script", cursive;*/
-
+    font-family: "Homemade Apple", cursive;
     font-size: 16px;
     background-color: #fdf6f3;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-family: "Marck Script", cursive;
+    margin: 0 auto;
+    font-family: "Old Standard TT", serif;
     font-weight: 800;
     color: #43484e;
+    font-size: 45px;
+    text-align: center;
+}
 
-
+h1 {
+    font-size: 130px;
+    text-align: center;
 }
 
 
@@ -37,9 +37,15 @@ ul, ol, li {
 
 a {
     text-decoration: none;
+    font-size: 14px;
+    color: #dbcac6;
 }
 
 
 p {
     margin: 0 0 5px;
+    color: #43484e;
+    font-family: "Homemade Apple", cursive;
+    font-size: 14px;
+    text-align: center;
 }

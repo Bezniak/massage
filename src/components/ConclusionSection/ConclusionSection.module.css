@@ -14,19 +14,10 @@
 }
 
 .conclusionTitle {
-    font-size: 50px;
-    text-align: center;
-    font-weight: 800;
     letter-spacing: 0.1rem;
-    color: #43484e;
 }
 
 .conclusionDescription {
-    font-family: "Marck Script", cursive;
-    font-size: 25px;
     padding: 40px;
-    text-align: center;
-    font-weight: 600;
-    color: #43484e;
     letter-spacing: 0.1rem;
 }

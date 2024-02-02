@@ -1,0 +1,120 @@
+.footerWrapper {
+    background-color: #a77d71;
+}
+
+.footerBlock {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.footerLogoInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.logoBlock {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.logoBlock img {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+}
+
+.logoBlock h2 {
+    font-size: 25px;
+    color: #fff;
+    letter-spacing: 0.2rem;
+}
+
+.logoContacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Old Standard TT", serif;
+
+}
+
+
+.logoContacts p {
+    color: #dbcac6;
+    font-family: "Old Standard TT", serif;
+}
+
+.footerLink {
+    font-family: "Old Standard TT", serif;
+    color: #dbcac6;
+    transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+    color: #fff;
+}
+
+.linksBlock {
+    margin: 30px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.linkSVG {
+    width: 25px;
+    height: 25px;
+}
+
+
+/*footerInfoWrapper*/
+
+
+.footerInfoWrapper {
+    margin: 30px 10px 30px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 90px;
+}
+
+.footerInfoBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footerInfoBlock li a {
+    color: #dbcac6;
+    transition: color 0.3s ease;
+}
+
+.footerInfoBlock li a:hover {
+    color: #fff;
+}
+
+.footerInfoTitle {
+    font-family: "Old Standard TT", serif;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+}
