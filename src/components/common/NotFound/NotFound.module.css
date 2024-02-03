@@ -1,0 +1,17 @@
+.notFoundWrapper {
+    margin: 0 auto;
+    background-color: #fbd3cd;
+    height: 100vh;
+}
+
+.notFoundBlock {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 200px;
+}
+
+.notFoundBlock svg {
+    text-align: center;
+    width: 80px;
+    height: 80px;
+}

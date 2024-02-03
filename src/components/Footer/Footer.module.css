@@ -28,41 +28,47 @@
 }
 
 .logoBlock {
+
+
+    padding-bottom: 10px;
+    color: #fff;
+
+
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: nowrap;
+    gap: 20px;
 }
 
 .logoBlock img {
     width: 40px;
     height: 40px;
-    margin: 20px;
 }
 
 .logoBlock h2 {
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
 }
 
+
 .logoContacts {
+    width: 350px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    font-family: "Old Standard TT", serif;
 
 }
 
 
 .logoContacts p {
     color: #dbcac6;
-    font-family: "Old Standard TT", serif;
+    line-height: 1.7;
 }
 
 .footerLink {
-    font-family: "Old Standard TT", serif;
     color: #dbcac6;
     transition: color 0.3s ease;
 }
@@ -89,7 +95,7 @@
 
 
 .footerInfoWrapper {
-    margin: 40px 10px 0 80px;
+    margin: 20px 10px 0 30px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -107,6 +113,8 @@
 .footerInfoBlock li a {
     color: #dbcac6;
     transition: color 0.3s ease;
+    line-height: 1.7;
+
 }
 
 .footerInfoBlock li a:hover {
@@ -114,14 +122,11 @@
 }
 
 .footerInfoTitle {
-    font-family: "Old Standard TT", serif;
-    font-size: 18px;
+    padding-bottom: 10px;
     color: #fff;
     letter-spacing: 0.1rem;
-    font-weight: 600;
 }
 
 .copyRight {
-    font-family: "Old Standard TT", serif;
-    padding: 20px;
+    padding: 20px 0;
 }

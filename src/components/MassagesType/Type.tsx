@@ -2,17 +2,16 @@ import React, {FC, useState} from 'react';
 import s from './Type.module.css';
 import {FaArrowRightLong} from 'react-icons/fa6';
 import {Link} from 'react-router-dom';
+import {animateScroll as scroll} from 'react-scroll';
 
 type PropsType = {
-    id: string
+    id: string;
     title: string;
     description: string;
     image: string;
 };
 
 export const Type: FC<PropsType> = ({description, title, image, id}) => {
-
-
     const [isHovered, setIsHovered] = useState(false);
 
     const onMouseEnter = () => {
@@ -23,6 +22,13 @@ export const Type: FC<PropsType> = ({description, title, image, id}) => {
         setIsHovered(false);
     };
 
+    const handleClick = () => {
+        // Плавный скролл вверх с использованием react-scroll
+        scroll.scrollToTop({
+            duration: 0, // Продолжительность анимации в миллисекундах
+            smooth: 'easeInOutQuad', // Тип анимации
+        });
+    };
 
     return (
         <div
@@ -35,8 +41,10 @@ export const Type: FC<PropsType> = ({description, title, image, id}) => {
             <p className={s.typeDescription}>{description}</p>
 
             <div className={s.buttonBlock}>
-                <Link to={`/massage-description/${id}`}>
-                    <button className={s.typeButton}>Узнать больше</button>
+                <Link to={`/massage-description/${id}`} onClick={handleClick}>
+                    <button className={s.typeButton}>
+                        Узнать больше
+                    </button>
                 </Link>
                 <FaArrowRightLong className={s.arrowIcon}/>
             </div>

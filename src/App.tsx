@@ -10,6 +10,7 @@ import ConclusionSection from './components/ConclusionSection/ConclusionSection'
 import {Footer} from './components/Footer/Footer';
 import {MassageInfo, WelcomeSectionData} from "./data/data";
 import DynamicMassageTypeDescription from "./components/TypeOfMassage/DynamicMassageTypeDescription";
+import {Preloader} from "./components/common/Preloader/Preloader";
 
 
 interface MassageData {
@@ -54,12 +55,9 @@ function App({data}: AppProps) {
                     <Header/>
                 </div>
 
-
                 <Routes>
-
-
                     <Route
-                        path='/'
+                        path='/massageBaranovichiMain'
                         element={
                             <>
                                 <MainContent/>
@@ -70,17 +68,12 @@ function App({data}: AppProps) {
                             </>
                         }
                     />
-
-
                     <Route
                         path='massage-description/:massageType'
-                        element={<DynamicMassageTypeDescription massageTypeDescription={data.massageTypeDescription}/>}
+                        element={<DynamicMassageTypeDescription
+                            massageTypeDescription={data.massageTypeDescription}/>}
                     />
-
-
                 </Routes>
-
-
                 <Footer/>
             </div>
         </div>

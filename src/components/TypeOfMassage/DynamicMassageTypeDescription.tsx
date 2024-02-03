@@ -1,8 +1,10 @@
 // DynamicMassageTypeDescription.tsx
 import React, {FC} from 'react';
+import s from './DynamicMassageTypeDescription.module.css';
 import {useParams} from 'react-router-dom';
 import {MassageInfo} from "../../data/data";
 import MassageTypeDescription from "../MassageTypeDescription/MassageTypeDescription";
+import NotFound from "../common/NotFound/NotFound";
 
 
 interface DynamicMassageTypeDescriptionProps {
@@ -12,7 +14,7 @@ interface DynamicMassageTypeDescriptionProps {
 }
 
 const DynamicMassageTypeDescription: FC<DynamicMassageTypeDescriptionProps> = ({massageTypeDescription}) => {
-    const { massageType } = useParams();
+    const {massageType} = useParams();
 
     console.log('massageType:', massageType);
     console.log('massageTypeDescription keys:', Object.keys(massageTypeDescription));
@@ -20,10 +22,14 @@ const DynamicMassageTypeDescription: FC<DynamicMassageTypeDescriptionProps> = ({
     const selectedMassageType = massageTypeDescription[massageType || 'default'];
 
     if (!selectedMassageType) {
-        return <div>Error: Invalid or missing massage type</div>;
+        return <NotFound/>;
     }
 
-    return <MassageTypeDescription {...selectedMassageType} />;
+    return (
+        <div>
+            <MassageTypeDescription {...selectedMassageType} />
+        </div>
+    );
 };
 
 export default DynamicMassageTypeDescription;

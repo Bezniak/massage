@@ -1,8 +1,8 @@
 .typeWrapper {
     margin: 20px 10px;
     padding: 20px;
-    max-width: 370px;
-    height: 650px;
+    max-width: 350px;
+    height: 560px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,7 +31,14 @@
     padding: 10px;
 }
 
+.typeDescription {
+    text-align: justify;
+    padding: 0 15px;
+    line-height: 1.5;
+}
+
 .buttonBlock {
+    margin: 20px 0;
     padding: 10px 25px;
     display: flex;
     justify-content: center;

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 *, *:before, *:after {
@@ -9,17 +8,19 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Homemade Apple", cursive;
+    font-family: "Mulish", sans-serif;
     font-size: 16px;
     background-color: #fdf6f3;
+    font-weight: 100;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
-    font-family: "Old Standard TT", serif;
-    font-weight: 800;
+    font-family: "Noto Serif", serif;
+    font-weight: 200;
     color: #43484e;
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -43,9 +44,9 @@ a {
 
 
 p {
-    margin: 0 0 5px;
+    margin: 0;
     color: #43484e;
-    font-family: "Homemade Apple", cursive;
     font-size: 14px;
     text-align: center;
+    font-weight: 400;
 }

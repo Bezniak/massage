@@ -27,12 +27,12 @@ const Header = (props: any) => {
         <nav className={headerClass}>
             <ul className={s.headerBlock}>
                 <li>
-                    <NavLink to='/'>
+                    <NavLink to='/massageBaranovichiMain'>
                         <img className={s.logo} src="/logo.svg" alt="logo"/>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'
+                    <NavLink to='/massageBaranovichiMain'
                              className={({isActive}) => (isActive ? s.active : s.normal)}>Главная</NavLink>
                 </li>
                 <li>

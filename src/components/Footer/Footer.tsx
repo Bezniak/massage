@@ -3,6 +3,7 @@ import s from './Footer.module.css';
 import {FaFacebook, FaSquareInstagram} from "react-icons/fa6";
 import {FaLinkedin, FaTiktok} from "react-icons/fa";
 import {NavLink} from "react-router-dom";
+import {animateScroll as scroll} from "react-scroll/modules";
 
 
 interface FooterProps {
@@ -10,6 +11,15 @@ interface FooterProps {
 }
 
 export const Footer: FC<FooterProps> = () => {
+
+    const handleClick = () => {
+        // Плавный скролл вверх с использованием react-scroll
+        scroll.scrollToTop({
+            duration: 0, // Продолжительность анимации в миллисекундах
+            smooth: 'easeInOutQuad', // Тип анимации
+        });
+    };
+
 
     const currentYear = new Date().getFullYear()
 
@@ -19,8 +29,12 @@ export const Footer: FC<FooterProps> = () => {
                 <div className={s.footerLogoInfo}>
                     <div className={s.logoWrapper}>
                         <div className={s.logoBlock}>
-                            <img src="/logo.svg" alt="logo"/>
-                            <h2>Art-Massage</h2>
+                            <NavLink onClick={handleClick} to='/massageBaranovichiMain'>
+                                <img src="/logo.svg" alt="logo"/>
+                            </NavLink>
+                            <NavLink onClick={handleClick} to='/massageBaranovichiMain'>
+                                <h2>Art-Massage</h2>
+                            </NavLink>
                         </div>
                         <div className={s.logoContacts}>
                             <p>г. Барановичи, Брестска область, Беларусь</p>
@@ -79,31 +93,36 @@ export const Footer: FC<FooterProps> = () => {
                     <ul className={s.footerInfoBlock}>
                         <li className={s.footerInfoTitle}>Виды оказываемого массажа</li>
                         <li>
-                            <NavLink to='/classicBodyMassage'>Классический массаж тела</NavLink>
+                            <NavLink to='/massage-description/classicBodyMassage' onClick={handleClick}>Классический
+                                массаж тела</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/backMassage'>Массаж спины</NavLink>
+                            <NavLink to='/massage-description/backMassage' onClick={handleClick}>Массаж спины</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/massageOfTheCervicalCollarArea'>Массаж шейно-воротниковой зоны</NavLink>
+                            <NavLink to='/massage-description/cervicalCollarArea' onClick={handleClick}>Массаж
+                                шейно-воротниковой зоны</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/footMassage'>Массаж ног</NavLink>
+                            <NavLink to='/massage-description/footMassage' onClick={handleClick}>Массаж ног</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/handMassage'>Массаж рук</NavLink>
+                            <NavLink to='/massage-description/handMassage' onClick={handleClick}>Массаж рук</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/honeyMassage'>Медовый массаж</NavLink>
+                            <NavLink to='/massage-description/honeyMassage' onClick={handleClick}>Медовый
+                                массаж</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/cuppingMassage'>Баночный массаж</NavLink>
+                            <NavLink to='/massage-description/cuppingMassage' onClick={handleClick}>Баночный
+                                массаж</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/faceMassage'>Массаж лица</NavLink>
+                            <NavLink to='/massage-description/faceMassage' onClick={handleClick}>Массаж лица</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/relaxingMassage'>Расслабляющий массаж</NavLink>
+                            <NavLink to='/massage-description/relaxingMassage' onClick={handleClick}>Расслабляющий
+                                массаж</NavLink>
                         </li>
                     </ul>
 
