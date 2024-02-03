@@ -8,13 +8,9 @@ import {MassagesType} from './components/MassagesType/MassagesType';
 import {PhotoCollection} from './components/PhotoCollection/PhotoCollection';
 import ConclusionSection from './components/ConclusionSection/ConclusionSection';
 import {Footer} from './components/Footer/Footer';
-import MassageTypeDescription from './components/MassageTypeDescription/MassageTypeDescription';
-import {MassageInfo} from "./data/data";
+import {MassageInfo, WelcomeSectionData} from "./data/data";
+import DynamicMassageTypeDescription from "./components/TypeOfMassage/DynamicMassageTypeDescription";
 
-interface WelcomeSection {
-    title: string;
-    description: string;
-}
 
 interface MassageData {
     id: string;
@@ -29,12 +25,20 @@ interface PhotoCollectionItem {
 }
 
 interface Data {
-    welcomeSection: WelcomeSection;
+    welcomeSection: WelcomeSectionData;
     massageData: MassageData[];
     photoCollection: PhotoCollectionItem[];
-    conclusionSection: WelcomeSection;
+    conclusionSection: WelcomeSectionData;
     massageTypeDescription: {
-        classicMassageInfo: MassageInfo
+        classicBodyMassage: MassageInfo
+        backMassage: MassageInfo,
+        cervicalCollarArea: MassageInfo;
+        footMassage: MassageInfo;
+        handMassage: MassageInfo;
+        honeyMassage: MassageInfo;
+        cuppingMassage: MassageInfo;
+        faceMassage: MassageInfo;
+        relaxingMassage: MassageInfo;
     }
 }
 
@@ -49,13 +53,6 @@ function App({data}: AppProps) {
                 <div className='appWrapper'>
                     <Header/>
                 </div>
-
-
-                {/*<MainContent />*/}
-                {/*<WelcomeSection {...data.welcomeSection} />*/}
-                {/*<MassagesType massageData={data.massageData} />*/}
-                {/*<PhotoCollection photoCollection={data.photoCollection} />*/}
-                {/*<ConclusionSection {...data.conclusionSection} />*/}
 
 
                 <Routes>
@@ -76,9 +73,11 @@ function App({data}: AppProps) {
 
 
                     <Route
-                        path='massage-description/:id?'
-                        element={<MassageTypeDescription {...data.massageTypeDescription.classicMassageInfo} />}
+                        path='massage-description/:massageType'
+                        element={<DynamicMassageTypeDescription massageTypeDescription={data.massageTypeDescription}/>}
                     />
+
+
                 </Routes>
 
 

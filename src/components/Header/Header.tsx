@@ -32,7 +32,7 @@ const Header = (props: any) => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/main'
+                    <NavLink to='/'
                              className={({isActive}) => (isActive ? s.active : s.normal)}>Главная</NavLink>
                 </li>
                 <li>

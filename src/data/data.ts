@@ -1,4 +1,4 @@
-interface WelcomeSectionData {
+export interface WelcomeSectionData {
     title: string;
     description: string;
 }
@@ -39,7 +39,7 @@ interface AppData {
     photoCollection: PhotoCollectionData[];
     conclusionSection: WelcomeSectionData;
     massageTypeDescription: {
-        classicMassageInfo: MassageInfo;
+        classicBodyMassage: MassageInfo
         backMassage: MassageInfo,
         cervicalCollarArea: MassageInfo;
         footMassage: MassageInfo;
@@ -170,7 +170,7 @@ export const data: AppData = {
         Забронируйте свой массаж сейчас, и позвольте себе насладиться уникальным опытом релаксации в студии 'Art-Massage'.`,
     },
     massageTypeDescription: {
-        classicMassageInfo: {
+        classicBodyMassage: {
             id: 'classicBodyMassage',
             imageBG: '/ClassicBodyMassageBG.jpg',
             title: "Классический массаж тела",
