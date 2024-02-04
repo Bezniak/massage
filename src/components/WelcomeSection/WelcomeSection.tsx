@@ -10,7 +10,7 @@ export const WelcomeSection: FC<WelcomeSectionProps> = ({ title, description }) 
     return (
         <div className={s.welcomeWrapper}>
             <div className={s.welcomeBlock}>
-                <img src="/logo.svg" alt="logo" className={s.welcomeImg}/>
+                <img src="/mainLogoApp.png" alt="logo" className={s.welcomeImg}/>
                 <h2 className={s.welcomeTitle}>{title}</h2>
                 <p className={s.welcomeDescription}>{description}</p>
             </div>

@@ -3,24 +3,10 @@ import s from './MassageTypeDescription.module.css';
 import {Preloader} from '../common/Preloader/Preloader';
 import {Button} from "../common/Button/Button";
 import {GiCheckMark} from "react-icons/gi";
+import {MassageInfo} from "../../data/data";
 
-interface MassageProps {
-    id: string;
-    imageBG: string;
-    title: string;
-    description: string;
-    title_1: string;
-    benefits: string[];
-    title_2: string;
-    stages: string[];
-    title_3: string;
-    contraindications: string[];
-    conclusion: string;
-    photoUrl: string[];
-    conclusionAdditionalInfo: string;
-}
 
-const MassageTypeDescription: FC<MassageProps> = (props) => {
+const MassageTypeDescription: FC<MassageInfo> = (props) => {
     const {
         title,
         imageBG,
@@ -47,7 +33,7 @@ const MassageTypeDescription: FC<MassageProps> = (props) => {
         backgroundImg.src = imageBG;
         backgroundImg.onload = handleImageLoad;
 
-        const images = photoUrl.map((url, index) => {
+        const images = photoUrl.map((url) => {
             const img = new Image();
             img.src = url;
             img.onload = handleImageLoad;

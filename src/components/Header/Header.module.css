@@ -4,17 +4,21 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: transparent;
+    /*background-color: transparent;*/
+    /*background-color: #6c6b6b;*/
     transition: background-color 0.3s ease;
     padding: 10px 0;
     box-sizing: border-box;
 }
 
 .scrolled {
-    background-color: #fdf6f3; /* Change to your desired background color when scrolled */
+    background-color: #dbcac6; /* Change to your desired background color when scrolled */
 }
 
+
+
 .headerBlock {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,35 +35,91 @@
 
 .headerBlock li {
     margin: 0 35px;
-}
+ }
 
-.normal {
+
+
+
+
+
+
+
+.normal, li {
     color: #fff; /* Set the default text color when not active and not scrolled */
     transition: color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: 16px;
+    font-size: 18px;
 }
 
+
+
 .scrolled .normal {
+    color: #fff; /* Set the text color when scrolled */
+}
+
+.scrolled li:hover, a:hover {
     color: #000; /* Set the text color when scrolled */
 }
 
 .normal:hover {
-    color: #f39a8f; /* Set the text color when hovered */
+    /*color: #000; !* Set the text color when hovered *!*/
     transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
 }
 
+
 .active, .active:hover {
-    color: #f39a8f; /* Set the text color for active links (red in this case) */
+    color: #fff; /* Set the text color for active links  */
     transition: background-color 0.3s ease, color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: 16px;
+    font-size: 18px;
 }
 
+
+
+
+
+
+
+
+
+
+
 .logo {
-    width: 50px;
+    width: 65px;
     height: 50px;
     fill: white;
+}
+
+.icon {
+    margin-left: 5px;
+    vertical-align: middle;
+    font-size: 15px
+}
+
+
+.liBlock {
+    position: relative;
+}
+
+.hoverWrapper {
+    position: absolute;
+    top: 100%; /* Position the div just below the li */
+    left: 50%; /* Center the div horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 1000; /* Ensure the div is above other elements */
+    background-color: #fff; /* Set background color as needed */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); /* Add box shadow for a subtle effect */
+    margin-top: 10px;
+    padding: 10px; /* Add padding for better visibility */
+    display: none; /* Hide the div by default */
+    border-radius: 10px;
+
+}
+
+/* Show the hover wrapper when li is hovered */
+.headerBlock li:hover .hoverWrapper {
+    display: block;
 }

@@ -1,6 +1,6 @@
 .mainBlock {
     position: relative;
-    background-image: url("../images/bg.jpg");
+    background-image: url("../images/mainImageBG.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;

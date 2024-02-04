@@ -1,6 +1,18 @@
 .typeWrapper {
-    background-color: #fbd3cd;
     height: auto;
+    padding-top: 5rem;
+    background-image: url('../images/listDownBG.png'), url('../images/listUpBG.png');
+    background-position: center; /* Adjust according to your needs */
+}
+
+.typeWrapper::before {
+    content: ''; /* Add this line to generate the pseudo-element */
+    width: 100%;
+    height: 75px;
+    background-color: #dbcac6;
+    z-index: 3;
+    position: absolute;
+    top: 0;
 }
 
 .typeTitle {

@@ -1,0 +1,17 @@
+.hoverBlock {
+    min-height: 70px;
+    min-width: 300px;
+}
+
+.hoverList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.hoverList a {
+    color: #000;
+
+}

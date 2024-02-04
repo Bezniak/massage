@@ -10,8 +10,9 @@ body {
     padding: 0;
     font-family: "Mulish", sans-serif;
     font-size: 16px;
-    background-color: #fdf6f3;
+    background-color: #f5e8e7;
     font-weight: 100;
+    color: #6c6b6b;
 
 }
 
@@ -19,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     font-family: "Noto Serif", serif;
     font-weight: 200;
-    color: #43484e;
+    color: #6c6b6b;
     font-size: 40px;
     text-align: center;
 }
@@ -39,13 +40,13 @@ ul, ol, li {
 a {
     text-decoration: none;
     font-size: 14px;
-    color: #dbcac6;
+    /*color: #dbcac6;*/
 }
 
 
 p {
     margin: 0;
-    color: #43484e;
+    color: #6c6b6b;
     font-size: 14px;
     text-align: center;
     font-weight: 400;

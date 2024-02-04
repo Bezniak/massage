@@ -4,6 +4,10 @@
     background-color: #f5e8e7;
     height: 100%;
     color: #43484e;
+
+    background-image: url('../images/listDownBG.png'), url('../images/listUpBG.png');
+    /*background-size: cover; !* Adjust according to your needs *!*/
+    background-position: center; /* Adjust according to your needs */
 }
 
 .typeDescriptionBlock {
@@ -102,7 +106,7 @@
 .descriptionItem {
     text-align: justify;
     padding: 10px 0 10px 0;
-}
+    color: #6c6b6b;}
 
 .descriptionTitle {
     padding: 20px 0;
@@ -122,15 +126,18 @@
     text-align: justify;
     text-indent: 40px; /* Adjust the indent as needed */
     line-height: 2; /* Adjust the line-height as needed */
+    color: #6c6b6b;
 }
 
 .conclusionDescriptionBook {
     text-align: center;
     font-size: 16px;
     padding: 30px 0 30px 0;
+    color: #6c6b6b;
 }
 
 .btnConclusion {
     text-align: center;
     padding: 40px 0 60px 0;
+    color: #6c6b6b;
 }

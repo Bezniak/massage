@@ -1,5 +1,9 @@
 .photoWrapper {
     background-color: #f5e8e7;
+    background-image: url('../images/listDownBG.png'), url('../images/listUpBG.png');
+    /*background-size: cover; !* Adjust according to your needs *!*/
+    background-position: center; /* Adjust according to your needs */
+
 }
 
 

@@ -7,7 +7,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-color: #f7eae8;
+    background-color: #dbcac6;
     border-radius: 30px;
     text-align: center;
     transition: box-shadow 0.3s ease; /* Добавлено свойство transition для box-shadow */

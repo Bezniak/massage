@@ -29,10 +29,10 @@ export const Footer: FC<FooterProps> = () => {
                 <div className={s.footerLogoInfo}>
                     <div className={s.logoWrapper}>
                         <div className={s.logoBlock}>
-                            <NavLink onClick={handleClick} to='/massageBaranovichiMain'>
-                                <img src="/logo.svg" alt="logo"/>
+                            <NavLink onClick={handleClick} to='/'>
+                                <img src="/mainLogoApp.png" alt="logo" className={s.logo}/>
                             </NavLink>
-                            <NavLink onClick={handleClick} to='/massageBaranovichiMain'>
+                            <NavLink onClick={handleClick} to='/'>
                                 <h2>Art-Massage</h2>
                             </NavLink>
                         </div>

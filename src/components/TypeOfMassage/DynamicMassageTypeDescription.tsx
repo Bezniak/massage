@@ -1,6 +1,4 @@
-// DynamicMassageTypeDescription.tsx
 import React, {FC} from 'react';
-import s from './DynamicMassageTypeDescription.module.css';
 import {useParams} from 'react-router-dom';
 import {MassageInfo} from "../../data/data";
 import MassageTypeDescription from "../MassageTypeDescription/MassageTypeDescription";
@@ -14,6 +12,7 @@ interface DynamicMassageTypeDescriptionProps {
 }
 
 const DynamicMassageTypeDescription: FC<DynamicMassageTypeDescriptionProps> = ({massageTypeDescription}) => {
+
     const {massageType} = useParams();
 
     console.log('massageType:', massageType);

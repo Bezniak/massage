@@ -11,6 +11,7 @@ import {Footer} from './components/Footer/Footer';
 import {MassageInfo, WelcomeSectionData} from "./data/data";
 import DynamicMassageTypeDescription from "./components/TypeOfMassage/DynamicMassageTypeDescription";
 import {Preloader} from "./components/common/Preloader/Preloader";
+import NotFound from "./components/common/NotFound/NotFound";
 
 
 interface MassageData {
@@ -57,12 +58,12 @@ function App({data}: AppProps) {
 
                 <Routes>
                     <Route
-                        path='/massageBaranovichiMain'
+                        path='/'
                         element={
                             <>
                                 <MainContent/>
                                 <WelcomeSection {...data.welcomeSection} />
-                                <MassagesType massageData={data.massageData}/>
+                                {/*<MassagesType massageData={data.massageData}/>*/}
                                 <PhotoCollection photoCollection={data.photoCollection}/>
                                 <ConclusionSection {...data.conclusionSection} />
                             </>
@@ -73,6 +74,11 @@ function App({data}: AppProps) {
                         element={<DynamicMassageTypeDescription
                             massageTypeDescription={data.massageTypeDescription}/>}
                     />
+
+                    <Route path='*' element={<NotFound/>}/>
+                    <Route path='/massageTypes' element={<MassagesType massageData={data.massageData}/>}/>
+
+
                 </Routes>
                 <Footer/>
             </div>

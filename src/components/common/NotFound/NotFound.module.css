@@ -1,17 +1,48 @@
 .notFoundWrapper {
     margin: 0 auto;
-    background-color: #fbd3cd;
+    background-image: url("/public/notFoundBG.png");
+    background-size: cover;
     height: 100vh;
 }
 
 .notFoundBlock {
     width: 1200px;
     margin: 0 auto;
-    padding: 200px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.notFoundBlock h1, h2 {
+    font-size: 60px;
+}
+
+.notFoundBlock p {
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+
 }
 
 .notFoundBlock svg {
-    text-align: center;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+
+.link {
+    margin: 30px 0;
+    padding: 10px 20px;
+    border: 1px solid #fdf6f3;
+    font-size: 18px;
+    text-transform: uppercase;
 }
