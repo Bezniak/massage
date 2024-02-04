@@ -1,5 +1,5 @@
 // Header.tsx
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import s from './Header.module.css';
 import {NavLink} from 'react-router-dom';
 import {Button} from '../common/Button/Button';
@@ -9,17 +9,35 @@ import {IoChevronDownSharp} from 'react-icons/io5';
 const Header = (props: any) => {
     const [scrolled, setScrolled] = useState(false);
     const [hoveredMenu, setHoveredMenu] = useState('');
+    const [isHoverWrapperVisible, setIsHoverWrapperVisible] = useState(false);
 
-    const [isHoverMenuVisible, setIsHoverMenuVisible] = useState(false);
 
     const onMoseEnter = (menu: string) => {
-        setIsHoverMenuVisible(true);
         setHoveredMenu(menu);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            setIsHoverWrapperVisible(true);
+        }, 0); // Set your desired delay in milliseconds
     };
 
     const onMouseLeave = () => {
-        setIsHoverMenuVisible(false);
+        clearTimeout(timeoutId);
         setHoveredMenu('');
+        timeoutId = setTimeout(() => {
+            setIsHoverWrapperVisible(false);
+        }, 100); // Set your desired delay in milliseconds
+    };
+
+    let timeoutId: any;
+
+    useEffect(() => {
+        return () => {
+            clearTimeout(timeoutId);
+        };
+    }, [timeoutId]);
+
+    const onClickInsideWrapper = () => {
+        setIsHoverWrapperVisible(false);
     };
 
     useEffect(() => {
@@ -37,6 +55,7 @@ const Header = (props: any) => {
 
     const headerClass = `${s.headerWrapper} ${scrolled ? s.scrolled : ''}`;
 
+
     return (
         <nav className={headerClass}>
             <ul className={s.headerBlock}>
@@ -52,16 +71,16 @@ const Header = (props: any) => {
                     </NavLink>
                 </li>
 
-                <div className={s.liBlock}>
 
-                    <li
-                        onMouseEnter={() => onMoseEnter('about')}
-                        onMouseLeave={onMouseLeave}
-                        className={hoveredMenu === 'about' ? s.active + ' ' + s.normal : s.normal}
-                    >
+                <div
+                    className={s.liBlock}
+                    onMouseEnter={() => onMoseEnter('about')}
+                    onMouseLeave={onMouseLeave}
+                >
+                    <li className={hoveredMenu === 'about' ? s.active + ' ' + s.normal : s.normal}>
                         О нас <IoChevronDownSharp className={s.icon}/>
-                        {isHoverMenuVisible && hoveredMenu === 'about' && (
-                            <div className={s.hoverWrapper}>
+                        {isHoverWrapperVisible && hoveredMenu === 'about' && (
+                            <div className={s.hoverWrapper} onClick={onClickInsideWrapper}>
                                 <HoverHeader
                                     items={[
                                         {title: 'Наш салон', path: '/ourSalon'},
@@ -75,15 +94,16 @@ const Header = (props: any) => {
                 </div>
 
 
-                <div className={s.liBlock}>
+                <div className={s.liBlock}
+                     onMouseEnter={() => onMoseEnter('services')}
+                     onMouseLeave={onMouseLeave}>
                     <li
-                        onMouseEnter={() => onMoseEnter('services')}
-                        onMouseLeave={onMouseLeave}
+
                         className={hoveredMenu === 'services' ? s.active + ' ' + s.normal : s.normal}
                     >
                         Услуги <IoChevronDownSharp className={s.icon}/>
-                        {isHoverMenuVisible && hoveredMenu === 'services' && (
-                            <div className={s.hoverWrapper}>
+                        {isHoverWrapperVisible && hoveredMenu === 'services' && (
+                            <div className={s.hoverWrapper} onClick={onClickInsideWrapper}>
                                 <HoverHeader
                                     items={[
                                         {title: 'Виды оказываемого массажа', path: '/massageTypes'},
@@ -95,15 +115,16 @@ const Header = (props: any) => {
                     </li>
                 </div>
 
-                <div className={s.liBlock}>
+                <div className={s.liBlock}
+                     onMouseEnter={() => onMoseEnter('specials')}
+                     onMouseLeave={onMouseLeave}>
                     <li
-                        onMouseEnter={() => onMoseEnter('specials')}
-                        onMouseLeave={onMouseLeave}
+
                         className={hoveredMenu === 'specials' ? s.active + ' ' + s.normal : s.normal}
                     >
                         Специальные предложения <IoChevronDownSharp className={s.icon}/>
-                        {isHoverMenuVisible && hoveredMenu === 'specials' && (
-                            <div className={s.hoverWrapper}>
+                        {isHoverWrapperVisible && hoveredMenu === 'specials' && (
+                            <div className={s.hoverWrapper} onClick={onClickInsideWrapper}>
                                 <HoverHeader
                                     items={[
                                         {title: 'Сертификаты', path: '/certificates'},
