@@ -82,15 +82,18 @@
 .hoverWrapper {
     position: absolute;
     top: 115%;
-    background-color: rgb(176, 176, 176, 0.9);
-    width: auto;
-    /*text-align: center;*/
-    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Задаем прозрачный цвет с затемнением */
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
 }
+
+
 
 .headerBlock li {
     position: relative;
 }
+
 
 
 

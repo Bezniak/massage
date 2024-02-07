@@ -15,6 +15,7 @@ const Header = (props: any) => {
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 0;
+            setIsBlockVisible(false)
             setScrolled(isScrolled);
         };
 
@@ -64,7 +65,7 @@ const Header = (props: any) => {
                     О нас <IoChevronDownSharp className={s.icon}/>
                 </li>
                 {isBlockVisible && contentBlock === 'about' && (
-                    <div className={s.hoverWrapper} onMouseLeave={onMouseLeave} onClick={onContentBlockClick}>
+                    <div className={`${s.hoverWrapper} ${isBlockVisible ? 'visible' : ''}`} onMouseLeave={onMouseLeave} onClick={onContentBlockClick}>
                         <HoverHeader
                             items={[
                                 {title: 'Наш салон', path: '/ourSalon'},
@@ -80,7 +81,7 @@ const Header = (props: any) => {
                     Услуги <IoChevronDownSharp className={s.icon}/>
                 </li>
                 {isBlockVisible && contentBlock === 'services' && (
-                    <div className={s.hoverWrapper} onMouseLeave={onMouseLeave} onClick={onContentBlockClick}>
+                    <div className={`${s.hoverWrapper} ${isBlockVisible ? 'visible' : ''}`} onMouseLeave={onMouseLeave} onClick={onContentBlockClick}>
                         <HoverHeader
                             items={[
                                 {title: 'Виды оказываемого массажа', path: '/massageTypes'},
@@ -95,7 +96,7 @@ const Header = (props: any) => {
                     Специальные предложения <IoChevronDownSharp className={s.icon}/>
                 </li>
                 {isBlockVisible && contentBlock === 'specialties' && (
-                    <div className={s.hoverWrapper} onMouseLeave={onMouseLeave} onClick={onContentBlockClick}>
+                    <div className={`${s.hoverWrapper} ${isBlockVisible ? 'visible' : ''}`} onMouseLeave={onMouseLeave} onClick={onContentBlockClick}>
                         <HoverHeader
                             items={[
                                 {title: 'Сертификаты', path: '/certificates'},

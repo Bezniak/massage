@@ -29,8 +29,8 @@ const HoverHeader: FC<HoverPropsType> = (props) => {
         <div className={`${s.hoverBlock}`} style={{width: `${props.width}px`, height: `${props.height}px`}}>
             <ul className={s.hoverList}>
                 {items.map((item, index) => (
-                    <li key={index} onClick={() => handleItemClick(item.path)}>
-                        <NavLink to={`${item.path}`}>
+                    <li className={s.listItem} key={index} onClick={() => handleItemClick(item.path)}>
+                        <NavLink className={s.linkItem} to={`${item.path}`}>
                             <FaArrowRightLong className={s.arrow}/>
                             {item.title}
                         </NavLink>

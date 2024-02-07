@@ -1,6 +1,4 @@
 .hoverBlock {
-    min-height: 70px;
-    min-width: 300px;
 }
 
 .hoverList {
@@ -8,13 +6,29 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 15px;
 }
 
 .hoverList a {
     color: #fff;
     text-transform: uppercase;
+    padding: 0;
+    margin: 10px;
+}
+
+.listItem:hover a {
+    color: #a77d71;
 }
 
 .arrow {
-    margin-right: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.listItem:hover .arrow {
+    opacity: 1;
 }
